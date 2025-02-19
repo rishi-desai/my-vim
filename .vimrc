@@ -93,7 +93,7 @@ noremap <c-right> <c-w><
 call plug#begin('~/.vim/plugged')
 
     Plug 'townk/vim-autoclose'
-    Plug 'tomasr/molokai'
+    Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
