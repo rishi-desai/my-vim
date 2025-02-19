@@ -2,15 +2,17 @@
 
 set nocompatible
 set number
-set shiftwidth=5
+set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set expandtab
-set nobackup
-set scrolloff=10
-set textwidth=80
+set spell
 set autoindent
 set incsearch
+set nowrap
 set ignorecase
+set smartcase
+set mouse=a
 set showcmd
 set showmode
 set showmatch
@@ -21,6 +23,12 @@ set wildmode=longest:list,full
 set wildignore=*.docx,*.pdf,*.exe,*.pyc
 set cursorline
 set cursorcolumn
+set background=dark
+set ruler
+set scrolljump=5
+set scrolloff=3
+
+
 
 " }}}
 
@@ -35,8 +43,6 @@ filetype indent on
 " VISUAL COMMANDS ---------------------------------------------------------------------------- {{{
 
 syntax on
-
-colorscheme onedark
 
 set guioptions-=T
 set guioptions-=L
@@ -93,7 +99,7 @@ noremap <c-right> <c-w><
 call plug#begin('~/.vim/plugged')
 
     Plug 'townk/vim-autoclose'
-    Plug 'tomasr/molokai'
+    Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -106,6 +112,11 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" Load onedark color scheme if it exists
+if filereadable(expand("~/.vim/plugged/onedark.vim/colors/onedark.vim"))
+    colorscheme onedark
+endif
 
 " If Vim version is equal to or greater than 7.3 enable undofile.
 " This allows you to undo changes to a file even after saving it.
