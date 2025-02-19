@@ -36,8 +36,6 @@ filetype indent on
 
 syntax on
 
-colorscheme onedark
-
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
@@ -106,6 +104,11 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" Load onedark color scheme if it exists
+if filereadable(expand("~/.vim/plugged/onedark.vim/colors/onedark.vim"))
+    colorscheme onedark
+endif
 
 " If Vim version is equal to or greater than 7.3 enable undofile.
 " This allows you to undo changes to a file even after saving it.
