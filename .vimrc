@@ -6,7 +6,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
-set spell
 set autoindent
 set incsearch
 set nowrap
