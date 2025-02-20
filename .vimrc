@@ -60,7 +60,7 @@ let mapleader = '\'
 nnoremap <leader>\ ``
 
 " Type jj to exit insert mode quickly
-inoremap jj <Esc>
+inoremap jj <Esc><space>
 
 " Press the space bar to type the : character in command mode
 nnoremap <space> :
