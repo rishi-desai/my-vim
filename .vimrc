@@ -22,7 +22,6 @@ set wildmode=longest:list,full
 set wildignore=*.docx,*.pdf,*.exe,*.pyc
 set cursorline
 set cursorcolumn
-set background=dark
 set ruler
 set scrolljump=5
 set scrolloff=3
