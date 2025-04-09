@@ -27,6 +27,8 @@ vim +PlugInstall +qall
 # move colortheme to correct folder
 cp ~/.vim/plugged/onedark.vim/colors/onedark.vim ~/.vim/colors/
 cp ~/.vim/plugged/onedark.vim/autoload/onedark.vim ~/.vim/autoload/
+cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/
+cp ~/.vim/plugged/gruvbox/autoload/gruvbox.vim ~/.vim/autoload/
 
 # apply changes
 echo "Applying configs..."
