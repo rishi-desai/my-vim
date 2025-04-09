@@ -59,7 +59,7 @@ echo "Adding additional aliases to .bashrc..."
 add_alias "wh" "cd /home/osr/knapp/lager/bin/whmodel" 131
 add_alias "idl" "cd /home/osr/knapp/lager/idl" 132
 add_alias "sprint" "cd /kisoft/build/src/lager/inst/_service" 133
-add_alias "oci" "cd $OSR_HOME/../site/inst/" 134
+add_alias "oci" "cd $OSR_HOME/../site/inst/$OSR_ID" 134
 
 echo "Applying .bashrc changes..."
 source ~/.bashrc
