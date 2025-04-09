@@ -22,12 +22,12 @@ set wildmode=longest:list,full
 set wildignore=*.docx,*.pdf,*.exe,*.pyc
 set cursorline
 set cursorcolumn
-set background=dark
 set ruler
 set scrolljump=5
 set scrolloff=3
-
-
+syntax enable
+set termguicolors
+set background=dark
 
 " }}}
 
@@ -60,7 +60,7 @@ let mapleader = '\'
 nnoremap <leader>\ ``
 
 " Type jj to exit insert mode quickly
-inoremap jj <Esc>
+inoremap jj <Esc><space>
 
 " Press the space bar to type the : character in command mode
 nnoremap <space> :
@@ -99,6 +99,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'townk/vim-autoclose'
     Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -112,9 +113,9 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" Load onedark color scheme if it exists
-if filereadable(expand("~/.vim/plugged/onedark.vim/colors/onedark.vim"))
-    colorscheme onedark
+" Load color scheme change here for prefered color scheme if it exists
+if filereadable(expand("~/.vim/colors/gruvbox.vim"))
+    colorscheme gruvbox
 endif
 
 " If Vim version is equal to or greater than 7.3 enable undofile.

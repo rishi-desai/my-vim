@@ -27,9 +27,23 @@ vim +PlugInstall +qall
 # move colortheme to correct folder
 cp ~/.vim/plugged/onedark.vim/colors/onedark.vim ~/.vim/colors/
 cp ~/.vim/plugged/onedark.vim/autoload/onedark.vim ~/.vim/autoload/
+cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/
+cp ~/.vim/plugged/gruvbox/autoload/gruvbox.vim ~/.vim/autoload/
 
 # apply changes
 echo "Applying configs..."
 vim +so % +qall
 
 echo "Vim setup is complete :)"
+
+echo "Backing up .bashrc file..."
+cp ~/.bashrc ~/.bashrc.bak
+
+echo "Adding additional aliases to .bashrc..."
+sed -i '131ialias wh="cd /home/osr/knapp/lager/bin/whmodel"' ~/.bashrc
+sed -i '132ialias idl="cd /home/osr/knapp/lager/idl"' ~/.bashrc
+
+echo "Applying .bashrc changes..."
+source ~/.bashrc
+
+echo ".bashrc changes complete :)"
