@@ -36,6 +36,12 @@ vim +so % +qall
 
 echo "Vim setup is complete :)"
 
+# Check if .bashrc exists, if not, create it
+if [ ! -f ~/.bashrc ]; then
+    touch ~/.bashrc
+    echo "# .bashrc file created" >> ~/.bashrc
+fi
+
 echo "Backing up .bashrc file..."
 cp ~/.bashrc ~/.bashrc.bak
 
