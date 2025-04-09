@@ -99,6 +99,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'townk/vim-autoclose'
     Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
 
 call plug#end()
 
