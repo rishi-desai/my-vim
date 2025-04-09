@@ -25,8 +25,9 @@ set cursorcolumn
 set ruler
 set scrolljump=5
 set scrolloff=3
-
-
+syntax enable
+set termguicolors
+set background=dark
 
 " }}}
 
@@ -111,10 +112,8 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" Load onedark color scheme if it exists
-if filereadable(expand("~/.vim/plugged/onedark.vim/colors/onedark.vim"))
-    colorscheme onedark
-endif
+" Load color scheme change here for prefered color scheme
+colorscheme gruvbox
 
 " If Vim version is equal to or greater than 7.3 enable undofile.
 " This allows you to undo changes to a file even after saving it.
