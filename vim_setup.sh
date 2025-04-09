@@ -45,9 +45,21 @@ fi
 echo "Backing up .bashrc file..."
 cp ~/.bashrc ~/.bashrc.bak
 
+# Function to add alias if it doesn't exist
+add_alias() {
+    local alias_name="$1"
+    local alias_command="$2"
+    local alias_line="$3"
+    if ! grep -q "$alias_name=" ~/.bashrc; then
+        sed -i "${alias_line}ialias ${alias_name}=\"${alias_command}\"" ~/.bashrc
+    fi
+}
+
 echo "Adding additional aliases to .bashrc..."
-sed -i '131ialias wh="cd /home/osr/knapp/lager/bin/whmodel"' ~/.bashrc
-sed -i '132ialias idl="cd /home/osr/knapp/lager/idl"' ~/.bashrc
+add_alias "wh" "cd /home/osr/knapp/lager/bin/whmodel" 131
+add_alias "idl" "cd /home/osr/knapp/lager/idl" 132
+add_alias "run" "cd /kisoft/build/src/lager/inst/_service" 133
+add_alias "oci" "cd \$OSR_HOME/../site/inst/" 134
 
 echo "Applying .bashrc changes..."
 source ~/.bashrc
