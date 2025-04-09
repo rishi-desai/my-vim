@@ -112,8 +112,10 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" Load color scheme change here for prefered color scheme
-colorscheme gruvbox
+" Load color scheme change here for prefered color scheme if it exists
+if filereadable(expand("~/.vim/colors/gruvbox.vim"))
+    colorscheme gruvbox
+endif
 
 " If Vim version is equal to or greater than 7.3 enable undofile.
 " This allows you to undo changes to a file even after saving it.
