@@ -19,7 +19,6 @@ echo "Enabling plugins for vim..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-
 # install plugins
 echo "Installing plugins..."
 vim +PlugInstall +qall
