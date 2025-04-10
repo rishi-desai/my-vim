@@ -63,6 +63,7 @@ add_alias "rci" "read -p \\\"Are you sure you want to execute the script? (y/n) 
 add_alias "ovi" "vi ~/.vimrc" 136
 add_alias "obs" "vi ~/.bashrc" 137
 add_alias "pm" "vi /kisoft/build/src/site/dat/port_map.txt" 138
+add_alias "hm" "vi /kisoft/build/src/site/dat/host_map.txt" 139
 
 echo "Applying .bashrc changes..."
 source ~/.bashrc
