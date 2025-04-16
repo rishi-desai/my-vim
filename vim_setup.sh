@@ -64,6 +64,13 @@ add_alias "ovi" "vi ~/.vimrc" 136
 add_alias "obs" "vi ~/.bashrc" 137
 add_alias "pm" "vi /kisoft/build/src/site/dat/port_map.txt" 138
 add_alias "hm" "vi /kisoft/build/src/site/dat/host_map.txt" 139
+add_alias "al" "auftlist" 140
+
+line_to_add="$PS1='[\[\e[34m\]\u\[\e[0m\]@\h \[\e[32m\]\W\[\e[0m\] \[\e[31m\]$OSR_ID\[\e[0m\]]\$ '"
+if ! grep -Fxq "$line_to_add" ~/.bashrc; then
+    # If the line doesn't exist, append it to .bashrc
+    echo "$line_to_add" >> ~/.bashrc
+fi
 
 echo "Applying .bashrc changes..."
 source ~/.bashrc
