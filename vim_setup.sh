@@ -57,7 +57,7 @@ add_alias() {
 echo "Adding additional aliases to .bashrc..."
 add_alias "wh" "vi /home/osr/knapp/lager/bin/whmodel/$OSR_ID" 131
 add_alias "idl" "cd /home/osr/knapp/lager/idl" 132
-add_alias "sprint" "cd /kisoft/build/src/site/inst/_service" 133
+add_alias "sprint" "cd /kisoft/build/src/site/inst/$OSR_ID/_service" 133
 add_alias "oci" "cd $OSR_HOME/../site/inst/$OSR_ID" 134
 add_alias "rci" "read -p \\\"Are you sure you want to execute the script? (y/n) \\\" choice; if [[ \\$choice == \\\"y\\\" ]]; then ./\\\$OSR_HOME/../site/inst/\\\$OSR_ID/osr_create_instance_\\\$OSR_ID.sh; fi" 135
 add_alias "ovi" "vi ~/.vimrc" 136
